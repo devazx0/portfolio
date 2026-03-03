@@ -17,36 +17,42 @@ const CONFIG = {
 }; 
  
 const SECTIONS = { 
-  about: "I engineer robust solutions with a focus on backend scalability and clean architecture. Specializing in Python and modern web technologies, I translate complex business requirements into efficient, testable, and maintainable code systems.", 
+  about: "I engineer robust full-stack solutions with a focus on scalable backend architectures and high-performance web ecosystems. Specializing in NestJS, Next.js, and Python, I translate complex business requirements into efficient, testable, and maintainable code systems.", 
   skills: { 
-    backend: ["Python", "Django / Flask", "PostgreSQL", "Redis", "REST APIs", "Docker"], 
-    frontend: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5/CSS3"], 
-    tools: ["Git / GitHub", "Linux", "CI/CD Pipelines", "AWS", "VS Code"] 
+    backend: ["NestJS", "Python / Django", "PostgreSQL", "Redis", "REST & GraphQL", "Docker"], 
+    frontend: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Framer Motion"], 
+    tools: ["Git / GitHub", "AWS / Vercel", "CI/CD", "NFC Integration", "Stripe / PayPal"] 
   }, 
   projects: [ 
     { 
-      title: "McomLoyalty", 
-      description: "A comprehensive loyalty management system designed to enhance customer retention through automated rewards and tracking.", 
-      stack: ["Python", "Django", "SQL", "REST API"] 
+      title: "MCOM_MALL", 
+      description: "A comprehensive e-commerce and business directory ecosystem. Features a robust customer loyalty engine, digital gift cards, voucher management, and a unified service provider interface. Engineered for high scalability and seamless user transactions.", 
+      stack: ["NestJS", "Next.js", "PostgreSQL", "Tailwind"],
+      video: "https://bpvcyvaeffbuxunofrju.supabase.co/storage/v1/object/public/my%20port/Mcom-Display(1).mp4",
+      demo: "https://mcom-mall.vercel.app/"
     }, 
     { 
-      title: "Payment_Gateway_Integration", 
-      description: "Secure payment processing microservice handling multiple provider integrations with unified error handling.", 
-      stack: ["Python", "Flask", "Redis", "Stripe API"] 
+      title: "MCOM_REWARD", 
+      description: "A sophisticated customer loyalty platform that empowers businesses to drive engagement through custom reward campaigns. Supports point-based and stamp-based systems with real-time redemption logic and behavioral analytics.", 
+      stack: ["NestJS", "Next.js", "PostgreSQL", "Redis"],
+      video: "https://bpvcyvaeffbuxunofrju.supabase.co/storage/v1/object/public/my%20port/Reward-Show(1).mp4",
+      demo: "https://mcomloyalty.vercel.app/"
     }, 
     { 
-      title: "Data_Pipeline_Core", 
-      description: "Automated ETL pipeline for processing large datasets with real-time monitoring and reporting.", 
-      stack: ["Python", "Pandas", "Airflow", "PostgreSQL"] 
+      title: "VEMTAP", 
+      description: "An innovative NFC-driven engagement system designed for the Nigerian market. Enables businesses to map physical assets—like tables or branches—to digital profiles, facilitating precise customer visit tracking and hyper-local engagement.", 
+      stack: ["NestJS", "Next.js", "PostgreSQL", "NFC Tech"],
+      video: "https://bpvcyvaeffbuxunofrju.supabase.co/storage/v1/object/public/my%20port/Vemtap-Show(1).mp4",
+      demo: "https://vemtap.vercel.app/"
     } 
   ] 
 }; 
  
 const SYSTEM_LOGS = [ 
-  { id: 1, timestamp: "2024-03-15 09:42:11", level: "SUCCESS", message: "Deployed McomLoyalty v1.2 to production." }, 
-  { id: 2, timestamp: "2024-03-14 16:20:05", level: "INFO", message: "Optimizing database queries for reporting module." }, 
-  { id: 3, timestamp: "2024-03-12 11:05:33", level: "WARN", message: "High traffic detected on API gateway. Scaling instances." }, 
-  { id: 4, timestamp: "2024-03-10 08:15:00", level: "INFO", message: "System initialization complete. All services green." }, 
+  { id: 1, timestamp: "2024-03-15 09:42:11", level: "SUCCESS", message: "De-coupled Mcom Mall microservices for improved fault tolerance." }, 
+  { id: 2, timestamp: "2024-03-14 16:20:05", level: "INFO", message: "Optimized PostgreSQL indexing for Vemtap analytics engine." }, 
+  { id: 3, timestamp: "2024-03-12 11:05:33", level: "WARN", message: "Scaling Reward System API to handle surge in campaign redemption." }, 
+  { id: 4, timestamp: "2024-03-10 08:15:00", level: "INFO", message: "System initialization complete. Mcom ecosystem fully operational." }, 
 ]; 
  
 const GEAR = { 
@@ -409,20 +415,67 @@ const SectionHeader = ({ title }) => (
 ); 
  
 const ProjectItem = ({ project }) => ( 
-  <motion.div variants={fadeInUp} className="group border-l-2 border-zinc-200 dark:border-zinc-800 pl-4 hover:border-emerald-500/50 transition-colors duration-300 py-2"> 
-    <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2"> 
-      <h3 className="text-zinc-800 dark:text-zinc-200 font-medium font-mono text-lg group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors matrix-text-hover"> 
-        {project.title} 
-      </h3> 
-      <div className="flex flex-wrap gap-2 text-xs text-zinc-500 font-mono"> 
-        {project.stack.map((tech) => ( 
-          <span key={tech}>[{tech}]</span> 
-        ))} 
+  <motion.div variants={fadeInUp} className="group border-l-2 border-zinc-200 dark:border-zinc-800 pl-6 hover:border-emerald-500/50 transition-all duration-300 py-4 relative"> 
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"> 
+        <h3 className="text-zinc-800 dark:text-zinc-200 font-bold font-mono text-xl group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors matrix-text-hover tracking-tighter"> 
+          {project.title} 
+        </h3> 
+        <div className="flex flex-wrap gap-2 text-[10px] text-zinc-500 font-mono"> 
+          {project.stack.map((tech) => ( 
+            <span key={tech} className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded">
+              {tech}
+            </span> 
+          ))} 
+        </div> 
       </div> 
-    </div> 
-    <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed max-w-2xl"> 
-      {project.description} 
-    </p> 
+      
+      <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed max-w-2xl font-light"> 
+        {project.description} 
+      </p>
+
+      {project.video && (
+        <div className="relative aspect-video w-full max-w-xl overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 group/video shadow-sm">
+          <video 
+            src={project.video} 
+            className="w-full h-full object-cover opacity-80 group-hover/video:opacity-100 transition-opacity"
+            muted
+            loop
+            onMouseEnter={(e) => e.target.play()}
+            onMouseLeave={(e) => { e.target.pause(); e.target.currentTime = 0; }}
+            playsInline
+          />
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover/video:opacity-0 transition-opacity">
+            <div className="bg-zinc-950/40 backdrop-blur-sm p-3 rounded-full border border-white/10">
+              <Gamepad2 size={24} className="text-white animate-pulse" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="flex flex-wrap gap-4 mt-2">
+        {project.demo && (
+          <a 
+            href={project.demo} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-2 text-xs font-bold font-mono text-emerald-600 dark:text-emerald-500 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors group/link"
+          >
+            EXECUTE_DEMO <ArrowUpRight size={14} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+          </a>
+        )}
+        {project.video && (
+          <a 
+            href={project.video} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-2 text-xs font-bold font-mono text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
+          >
+            SOURCE_VIDEO <ArrowUpRight size={14} />
+          </a>
+        )}
+      </div>
+    </div>
   </motion.div> 
 ); 
  
