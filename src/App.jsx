@@ -1170,24 +1170,13 @@ const App = () => {
               </div>
             </motion.div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-3">
-              <motion.div variants={fadeInUp} className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-emerald-500/40 shadow-lg shrink-0 group bg-zinc-900">
-                <img
-                  src={CONFIG.avatarUrl}
-                  alt={CONFIG.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 ring-1 ring-inset ring-emerald-500/20 rounded-2xl pointer-events-none" />
-              </motion.div>
-              <div className="min-w-0">
-                <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-1 text-zinc-900 dark:text-zinc-100 break-words">
-                  <TypingEffect text={CONFIG.name} />
-                </h1>
-                <motion.p variants={fadeInUp} className="text-sm sm:text-xl text-zinc-700 dark:text-zinc-300 font-semibold">
-                  {CONFIG.role}
-                </motion.p>
-              </div>
-            </div>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-2 sm:mb-3 text-zinc-900 dark:text-zinc-100 break-words">
+              <TypingEffect text={CONFIG.name} />
+            </h1>
+
+            <motion.p variants={fadeInUp} className="text-sm sm:text-xl text-zinc-700 dark:text-zinc-300 font-semibold mb-1.5">
+              {CONFIG.role}
+            </motion.p>
 
             <motion.p variants={fadeInUp} className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-400 font-mono mb-5 leading-normal">
               {CONFIG.subRole} · {CONFIG.location}
