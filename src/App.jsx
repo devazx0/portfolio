@@ -165,28 +165,6 @@ const PROJECTS = [
     liveStatus: "PRODUCTION"
   },
   {
-    id: "issueflow",
-    title: "ISSUEFLOW",
-    category: "FULL_STACK_SAAS",
-    tagline: "Multi-Tenant Issue Tracker & Agile Sprint Manager",
-    metricBadges: [
-      "Strict Multi-Tenancy",
-      "Turborepo Monorepo",
-      "Offline PWA + Cmd+K",
-      "Built Solo in ~2 Weeks"
-    ],
-    description: "Jira-style full-stack issue tracker with dual-layer tenant isolation (DB schema + NestJS guards), per-project auto-numbering, interactive Kanban workflows, Web Push notifications, offline PWA support, and global Cmd+K palette.",
-    architectureSpecs: [
-      "Strict Tenant Isolation: Row-level tenant guards and database middleware preventing cross-tenant leakage.",
-      "Monorepo Speed: Turborepo sharing types, DTOs, and validation schemas between client and API.",
-      "Offline First: PWA caching and background sync for lightning-fast issue management."
-    ],
-    stack: ["NestJS", "React", "Vite", "Prisma", "PostgreSQL", "Turborepo", "Tailwind CSS", "PWA"],
-    demo: "https://issuefloww.vercel.app/",
-    github: "https://github.com/Azeem-py",
-    liveStatus: "LIVE_APP"
-  },
-  {
     id: "mcom-mall",
     title: "MCOM_MALL",
     category: "PRODUCTION_SAAS",
@@ -316,6 +294,28 @@ const PROJECTS = [
     demo: null,
     github: null,
     liveStatus: "CLIENT_DELIVERED"
+  },
+  {
+    id: "issueflow",
+    title: "ISSUEFLOW",
+    category: "FULL_STACK_SAAS",
+    tagline: "Multi-Tenant Issue Tracker & Agile Sprint Manager",
+    metricBadges: [
+      "Strict Multi-Tenancy",
+      "Turborepo Monorepo",
+      "Offline PWA + Cmd+K",
+      "Built Solo in ~2 Weeks"
+    ],
+    description: "Jira-style full-stack issue tracker with dual-layer tenant isolation (DB schema + NestJS guards), per-project auto-numbering, interactive Kanban workflows, Web Push notifications, offline PWA support, and global Cmd+K palette.",
+    architectureSpecs: [
+      "Strict Tenant Isolation: Row-level tenant guards and database middleware preventing cross-tenant leakage.",
+      "Monorepo Speed: Turborepo sharing types, DTOs, and validation schemas between client and API.",
+      "Offline First: PWA caching and background sync for lightning-fast issue management."
+    ],
+    stack: ["NestJS", "React", "Vite", "Prisma", "PostgreSQL", "Turborepo", "Tailwind CSS", "PWA"],
+    demo: "https://issuefloww.vercel.app/",
+    github: "https://github.com/Azeem-py",
+    liveStatus: "LIVE_APP"
   }
 ];
 
@@ -434,9 +434,9 @@ const SnakeGame = () => {
     setDir(prevDir => {
       if (gameOver) return prevDir;
       if ((prevDir.x === 1 && newDir.x === -1) ||
-          (prevDir.x === -1 && newDir.x === 1) ||
-          (prevDir.y === 1 && newDir.y === -1) ||
-          (prevDir.y === -1 && newDir.y === 1)) {
+        (prevDir.x === -1 && newDir.x === 1) ||
+        (prevDir.y === 1 && newDir.y === -1) ||
+        (prevDir.y === -1 && newDir.y === 1)) {
         return prevDir;
       }
       return newDir;
@@ -1054,10 +1054,9 @@ const SystemLogs = () => (
       {SYSTEM_LOGS.map((log) => (
         <div key={log.id} className="flex flex-col sm:flex-row sm:gap-3 leading-relaxed">
           <span className="opacity-50 shrink-0">[{log.timestamp}]</span>
-          <span className={`font-bold shrink-0 w-16 sm:w-20 ${
-            log.level === 'SUCCESS' ? 'text-emerald-600 dark:text-emerald-500' :
-            log.level === 'WARN' ? 'text-amber-600 dark:text-amber-500' : 'text-blue-600 dark:text-blue-500'
-          }`}>
+          <span className={`font-bold shrink-0 w-16 sm:w-20 ${log.level === 'SUCCESS' ? 'text-emerald-600 dark:text-emerald-500' :
+              log.level === 'WARN' ? 'text-amber-600 dark:text-amber-500' : 'text-blue-600 dark:text-blue-500'
+            }`}>
             {log.level}
           </span>
           <span className="text-zinc-700 dark:text-zinc-300">{log.message}</span>
@@ -1280,11 +1279,10 @@ const App = () => {
                 <button
                   key={cat.id}
                   onClick={() => setProjectCategory(cat.id)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all shrink-0 active:scale-95 ${
-                    projectCategory === cat.id
+                  className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all shrink-0 active:scale-95 ${projectCategory === cat.id
                       ? 'bg-emerald-600 text-white dark:bg-emerald-500 dark:text-zinc-950 shadow-sm'
                       : 'bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800'
-                  }`}
+                    }`}
                 >
                   {cat.label}
                 </button>
@@ -1319,7 +1317,7 @@ const App = () => {
             className="mb-20 sm:mb-24"
           >
             <SectionHeader title="INITIATE_CONTACT" count="OPEN_TO_ROLES" />
-            
+
             <div className="mb-4 sm:mb-6">
               <DownloadCvButton />
             </div>
