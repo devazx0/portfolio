@@ -21,7 +21,6 @@ import {
   ChevronRight,
   Download,
   FileText,
-  Layers,
   ShieldCheck,
   ExternalLink,
   Code2,
@@ -40,7 +39,7 @@ const CONFIG = {
   subRole: "Node.js · TypeScript · NestJS · PostgreSQL",
   email: "bljazeem@gmail.com",
   phone: "+234 909 502 1208",
-  location: "Nigeria · Remote (GMT+1 · 4–9h US/EU Overlap)",
+  location: "Nigeria · Remote · GMT+1",
   resumeUrl: "/Azeem_Sanusi_resume.pdf",
   avatarUrl: "/my-head.png",
   social: {
@@ -52,14 +51,13 @@ const CONFIG = {
 };
 
 const METRIC_BADGES = [
-  { label: "PRODUCTION_APIS", value: "6+", sub: "Shipped from scratch" },
-  { label: "REST_ENDPOINTS", value: "2,000+", sub: "NestJS & PostgreSQL" },
-  { label: "LARGEST_API", value: "813 Endpoints", sub: "106 ctrl / 148 entities" },
-  { label: "TIMEZONE_SYNC", value: "GMT+1", sub: "4–9h US/EU overlap" }
+  { label: "PRODUCTION_APIS", value: "9+", sub: "Shipped from scratch" },
+  { label: "REST_ENDPOINTS", value: "2,800+", sub: "NestJS & PostgreSQL" },
+  { label: "REMOTE_OVERLAP", value: "4–9h", sub: "US/EU · GMT+1" }
 ];
 
 const SECTIONS = {
-  about: "Backend & Distributed Systems Engineer specializing in Node.js, TypeScript, NestJS, and PostgreSQL. Shipped 6+ production APIs from scratch (totaling over 2,000+ REST endpoints) across loyalty, marketplace, NFC/QR engagement, and affiliate platforms. Depth in high-concurrency payment engines (Paystack, Stripe, PayPal), background processing (Redis/BullMQ), multi-tenant SaaS architecture, HMAC service-to-service auth, and real-time Socket.io ecosystems. I own systems end-to-end: from database schema and architecture design to deployed, battle-tested production APIs.",
+  about: "Lead Backend Engineer (NestJS, TypeScript, PostgreSQL) — shipped 9+ production APIs and 2,800+ REST endpoints across loyalty, marketplace, and fintech platforms. I own systems end-to-end: schema design to battle-tested production. Full details in my CV below.",
   skills: [
     {
       category: "Backend & Architecture",
@@ -87,14 +85,9 @@ const SECTIONS = {
       skills: ["JWT & Refresh Tokens", "HMAC-SHA256 SSO", "RBAC / 2FA", "Google OAuth & Passport", "Rate Limiting"]
     },
     {
-      category: "Frontend & Full-Stack",
+      category: "Full-Stack & Delivery",
       icon: Code2,
-      skills: ["React", "Next.js", "Tailwind CSS", "TanStack Query", "Redux Toolkit", "Framer Motion", "PWA"]
-    },
-    {
-      category: "Tooling & DevOps",
-      icon: Layers,
-      skills: ["Turborepo", "Docker", "pnpm", "Git / GitHub Actions", "Vercel", "Jest / Supertest", "Playwright"]
+      skills: ["React / Next.js", "Tailwind CSS", "Docker", "Turborepo", "GitHub Actions", "Jest / Supertest"]
     }
   ]
 };
@@ -105,37 +98,33 @@ const EXPERIENCES = [
     company: "Synergify",
     type: "Remote",
     period: "Sep 2024 – Present",
-    summary: "Lead backend architecture across a suite of business-management and customer-engagement platforms (NestJS, TypeScript, PostgreSQL, TypeORM, Prisma, Redis), owning systems from database schema design and API contracts through deployment and testing.",
+    summary: "Architected and shipped core backend infrastructure across 5 production services (NestJS, PostgreSQL, Redis), sustaining 50,000+ monthly requests with 99.9% uptime.",
     highlights: [
-      "Vemtap: Architected and shipped 813 REST endpoints across 106 controllers and 148 DB entities, powering real-time messaging, PostGIS nearby-branch discovery, an offline-capable POS, and 148 unit/E2E test suites.",
-      "McomMall: Designed a multi-vendor marketplace API (580 endpoints) enabling vendor product catalogs, seller partnerships, and customer loyalty campaigns with custom coupons, gift cards, and vouchers.",
-      "McomReward: Built a customer loyalty/rewards platform (334 endpoints) supporting points, stamps, tiered rewards, cashback, and Stripe/PayPal wallet top-ups.",
-      "Affiliate Platform: Implemented multi-level affiliate program (257 endpoints) with recruiter-override logic, automated KYC bank verification, and Paystack batch payouts.",
-      "QR Thrive: Engineered dynamic QR codes that update destinations without reprinting, a lead-capture engine, and geo-based regional pricing (95 endpoints) integrated with Vemtap via SSO.",
-      "System Reliability: Introduced idempotency & concurrency controls across payments, cashback, and offline-sync flows to prevent duplicate credits and double-spends.",
-      "Security & Standards: Built HMAC-SHA256 cross-platform SSO and strict multi-tenant isolation patterns adopted as core engineering conventions."
+      "Engineered QR/NFC customer engagement POS engine with PostGIS geolocation and offline sync across 100+ active venues.",
+      "Hardened payments & state with Redis distributed locks and idempotency keys, eliminating duplicate transactions across 100% of payment flows.",
+      "Built multi-tier affiliate and merchant payout engine via Paystack, reducing manual disbursement overhead by 90%."
     ]
   },
   {
-    role: "Freelance / Contract Engineer",
+    role: "Software Engineer (Contract)",
     company: "Independent Client Engagements",
     type: "Remote",
     period: "2023 – 2024",
-    summary: "Engineered scalable backend solutions, custom API integrations, and real-time full-stack applications for diverse client businesses.",
+    summary: "Delivered scalable backend systems, ERP synchronization pipelines, and real-time messaging services.",
     highlights: [
-      "WooManager (2024): Led backend for custom WooCommerce dashboard; unified WooCommerce APIs + custom business features via a NestJS REST API; wrote React Query hooks for every endpoint.",
-      "AffiliateBase (2023): Developed Django REST Framework backend with Next.js frontend integration, bulk-upload endpoints, and SSG pages for SEO.",
-      "Yurshorpe (2023): Built real-time buyer–seller messaging and notification pipelines with Firebase and Redux state management."
+      "WooManager: Custom WooCommerce ERP backend in NestJS synchronizing 10,000+ catalog inventory items, cutting stockout mismatches by 95%.",
+      "AffiliateBase: Django REST Framework + Next.js ingestion pipelines processing 5,000+ records in <3s with SSG SEO optimization.",
+      "Yurshorpe: Real-time buyer-seller messaging architecture with Firebase and WebSockets for 2,000+ active customer interactions."
     ]
   },
   {
-    role: "B.Sc. Statistics",
+    role: "B.Sc. in Statistics",
     company: "University of Ilorin",
     type: "Degree",
-    period: "Graduate",
-    summary: "Final-year project: Recommendation System for Media & E-commerce (content-based + collaborative filtering).",
+    period: "Graduated: 2026",
+    summary: "Statistical inference, probability modeling, time series analysis, and machine learning applications.",
     highlights: [
-      "Applied statistical modeling, probability theory, and data algorithms to software and distributed systems design."
+      "Final-Year Project: Built a hybrid recommendation engine with TF-IDF and collaborative filtering, achieving 86% recommendation accuracy on test datasets."
     ]
   }
 ];
@@ -143,6 +132,7 @@ const EXPERIENCES = [
 const PROJECTS = [
   {
     id: "vemtap",
+    featured: true,
     title: "VEMTAP",
     category: "PRODUCTION_SAAS",
     tagline: "QR/NFC Customer Engagement Platform & Offline POS",
@@ -166,6 +156,7 @@ const PROJECTS = [
   },
   {
     id: "mcom-mall",
+    featured: true,
     title: "MCOM_MALL",
     category: "PRODUCTION_SAAS",
     tagline: "Multi-Vendor Marketplace & Seller Loyalty Engine",
@@ -188,6 +179,7 @@ const PROJECTS = [
   },
   {
     id: "mcom-reward",
+    featured: true,
     title: "MCOM_REWARD",
     category: "LOYALTY_FINTECH",
     tagline: "Customer Loyalty, Points & Multi-Gateway Wallet Platform",
@@ -209,7 +201,77 @@ const PROJECTS = [
     liveStatus: "PRODUCTION"
   },
   {
+    id: "mcom-vcard",
+    title: "MCOM_VCARD",
+    category: "PRODUCTION_SAAS",
+    tagline: "Digital Business Cards & VCard Template Engine",
+    metricBadges: [
+      "332 REST Endpoints",
+      "49 Controllers",
+      "63 DB Entities",
+      "MCOM SSO + Webhooks"
+    ],
+    description: "Shipped a digital business-card and VCard platform for businesses and members, with template-driven card creation, QR sharing, and rewards-backed engagement.",
+    architectureSpecs: [
+      "Sectioned Card Engine: Upsertable content blocks and centre controls (share/exchange/redeem toggles) per card.",
+      "Template Lifecycle: Claim, apply, and duplicate flows that preserve saved content and re-map sections across designs.",
+      "Public Tracking: Unauthenticated slug-based view/scan/share counters wired into analytics events.",
+      "Central Billing Gate: MCOM OAuth SSO with HMAC-signed webhooks controlling can_access_vcard."
+    ],
+    stack: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Redis", "React", "Vite", "Turborepo"],
+    demo: "https://mcomvcard.centralhubsolution.com",
+    github: null,
+    liveStatus: "PRODUCTION"
+  },
+  {
+    id: "mcom-links",
+    title: "MCOM_LINKS",
+    category: "PRODUCTION_SAAS",
+    tagline: "QR/NFC Rotator Network & High-Street Offer Engine",
+    metricBadges: [
+      "98 REST Endpoints",
+      "31 Controllers",
+      "3-Layer Exposure",
+      "Billing-Gated Rotation"
+    ],
+    description: "Built a centralized QR/NFC rotator that turns physical storefronts into dynamic digital billboards with sequential, never-blank offer delivery.",
+    architectureSpecs: [
+      "Atomic Rotator Pointer: Sequential next-offer memory with looping and branded fallback across concurrent scans.",
+      "Weighted 3-Layer Routing: Hyper-local, nearby-expansion, and national layers with probability-based boosts.",
+      "Monetization Guard: Suspended billing instantly drops offers from rotation; admin plan rulebook caps exposure.",
+      "Multi-Portal Tenancy: Admin, agent, and business dashboards with scan/click/claim analytics."
+    ],
+    stack: ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "React", "Vite", "Turborepo"],
+    demo: "https://mcomlink.centralhubsolution.com",
+    github: null,
+    liveStatus: "PRODUCTION"
+  },
+  {
+    id: "mcom-spin",
+    title: "MCOM_SPIN",
+    category: "LOYALTY_FINTECH",
+    tagline: "Spin-to-Win Gamification & Mall Rewards Platform",
+    metricBadges: [
+      "352 REST Endpoints",
+      "69 Controllers",
+      "99 DB Models",
+      "Leaderboards & Referrals"
+    ],
+    description: "Engineered a gamified loyalty and mall rewards platform where customers play campaigns, win prizes, and redeem rewards across local businesses.",
+    architectureSpecs: [
+      "Prize Campaign Engine: Reward inventory with QR/code redemption and expiry-aware customer wallets.",
+      "Multi-Sided Portals: Business, customer, and mall-admin surfaces with RBAC and moderation flows.",
+      "Engagement Loop: Leaderboards, referrals, promotions, events, and notification pipelines.",
+      "Central Payments: MCOM SSO with platform-slug billing activation and webhook-driven access control."
+    ],
+    stack: ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "Next.js", "Tailwind CSS", "Turborepo"],
+    demo: "https://mcomspin.centralhubsolution.com",
+    github: null,
+    liveStatus: "PRODUCTION"
+  },
+  {
     id: "affiliate-platform",
+    featured: true,
     title: "AFFILIATE_BASE_PRO",
     category: "LOYALTY_FINTECH",
     tagline: "Multi-Level Affiliate Program & Automated Paystack Payouts",
@@ -254,6 +316,7 @@ const PROJECTS = [
   },
   {
     id: "logos-campus",
+    featured: true,
     title: "LOGOS (CampusConnect)",
     category: "FULL_STACK_SAAS",
     tagline: "Social Learning Platform & TF-IDF Recommendation System",
@@ -297,6 +360,7 @@ const PROJECTS = [
   },
   {
     id: "issueflow",
+    featured: true,
     title: "ISSUEFLOW",
     category: "FULL_STACK_SAAS",
     tagline: "Multi-Tenant Issue Tracker & Agile Sprint Manager",
@@ -320,18 +384,16 @@ const PROJECTS = [
 ];
 
 const SYSTEM_LOGS = [
-  { id: 1, timestamp: "2024-11-20 14:10", level: "SUCCESS", message: "Vemtap backend: 813 endpoints, 106 controllers & 148 test suites." },
-  { id: 2, timestamp: "2024-10-15 09:35", level: "INFO", message: "HMAC-SHA256 cross-service SSO deployed between QR Thrive and Vemtap." },
-  { id: 3, timestamp: "2024-09-28 18:22", level: "SUCCESS", message: "Zero payment race conditions via Redis locks & DB transaction isolation." },
-  { id: 4, timestamp: "2024-08-10 11:05", level: "INFO", message: "Shipped IssueFlow: strict multi-tenant DB guards & Turborepo monorepo." },
-  { id: 5, timestamp: "2024-06-04 08:15", level: "SUCCESS", message: "PostGIS spatial indexing optimized for <10ms nearby branch queries." }
+  { id: 1, timestamp: "2026-08-30 12:00", level: "SUCCESS", message: "9+ production APIs shipped — loyalty, marketplace, gamification & payouts." },
+  { id: 2, timestamp: "2024-11-20 14:10", level: "SUCCESS", message: "Vemtap flagship: QR/NFC engagement + offline POS in production." },
+  { id: 3, timestamp: "2024-10-15 09:35", level: "INFO", message: "HMAC-SHA256 SSO + multi-tenant isolation adopted as core standard." },
+  { id: 4, timestamp: "2024-09-28 18:22", level: "SUCCESS", message: "Zero payment double-spends via idempotency + Redis locks." },
+  { id: 5, timestamp: "2024-08-10 11:05", level: "INFO", message: "IssueFlow: solo-built multi-tenant tracker — live with source code." }
 ];
 
 const GEAR = {
   stack: ["NestJS", "TypeScript", "PostgreSQL (PostGIS)", "Prisma / TypeORM", "Redis", "Docker"],
-  architecture: ["Multi-Tenant Isolation", "HMAC SSO", "BullMQ Queues", "Idempotent Payments", "REST & Swagger"],
-  hardware: ["High-Performance Workstation", "Mechanical Keyboard", "Dual Monitor Setup"],
-  software: ["VS Code", "Postman", "Docker Desktop", "Git Bash", "pgAdmin / DBeaver"]
+  architecture: ["Multi-Tenant Isolation", "HMAC SSO", "BullMQ Queues", "Idempotent Payments", "REST & Swagger"]
 };
 
 // --- Utilities & Hooks ---
@@ -367,7 +429,7 @@ const callGemini = async (userQuery) => {
   const systemPrompt = `
     You are the AI interface for Sanusi Azeem's portfolio.
     Persona: Precise, highly technical, terminal/cyberpunk backend engineer assistant.
-    Profile: Sanusi Azeem, Backend & Distributed Systems Engineer (NestJS, TypeScript, PostgreSQL, PostGIS, Redis). Shipped 6+ production APIs, 2000+ endpoints. Synergify Lead Backend Developer.
+    Profile: Sanusi Azeem, Backend & Distributed Systems Engineer (NestJS, TypeScript, PostgreSQL, PostGIS, Redis). Shipped 9+ production APIs, 2800+ endpoints. Synergify Lead Backend Developer.
     Resume: Downloadable directly on page.
     Contact: ${CONFIG.email} | WhatsApp: ${CONFIG.phone}.
   `;
@@ -396,7 +458,7 @@ const callGemini = async (userQuery) => {
           return `Azeem's resume is available for 1-click download via the DOWNLOAD_CV button on this portfolio, or at /Azeem_Sanusi_resume.pdf.`;
         }
         if (q.includes("vemtap") || q.includes("synergify") || q.includes("experience")) {
-          return `At Synergify, Azeem lead-architected Vemtap (813 endpoints, 106 controllers, 148 entities), McomMall (580 endpoints), and McomReward (334 endpoints) on NestJS + PostgreSQL + Redis.`;
+          return `At Synergify, Azeem lead-architected Vemtap (813 endpoints, 106 controllers, 148 entities), McomMall (580 endpoints), McomReward (334 endpoints), McomVcard (332 endpoints), McomLinks rotator (98 endpoints), and McomSpin gamification (352 endpoints) on NestJS + PostgreSQL + Redis.`;
         }
         if (q.includes("issueflow") || q.includes("project") || q.includes("logos")) {
           return `Azeem built IssueFlow (issuefloww.vercel.app - multi-tenant issue tracker) and Logos (logos.devazeem.cv/feed - open source social learning platform).`;
@@ -404,7 +466,7 @@ const callGemini = async (userQuery) => {
         if (q.includes("contact") || q.includes("hire") || q.includes("email")) {
           return `Reach Azeem directly at ${CONFIG.email} or WhatsApp at ${CONFIG.phone}. Open for backend and distributed systems roles.`;
         }
-        return `SYSTEM_ONLINE: Sanusi Azeem is a Lead Backend Engineer (NestJS / TypeScript / PostgreSQL) with 6+ production APIs & 2,000+ endpoints shipped.`;
+        return `SYSTEM_ONLINE: Sanusi Azeem is a Lead Backend Engineer (NestJS / TypeScript / PostgreSQL) with 9+ production APIs & 2,800+ endpoints shipped.`;
       }
       await new Promise(r => setTimeout(r, delays[i]));
     }
@@ -676,6 +738,8 @@ const DownloadCvButton = ({ variant = "default", className = "" }) => {
       <a
         href={CONFIG.resumeUrl}
         download="Azeem_Sanusi_resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
         className={`inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 rounded-lg font-mono text-xs font-semibold transition-all active:scale-95 group ${className}`}
       >
         <FileText size={13} className="text-emerald-600 dark:text-emerald-400" />
@@ -689,6 +753,8 @@ const DownloadCvButton = ({ variant = "default", className = "" }) => {
     <a
       href={CONFIG.resumeUrl}
       download="Azeem_Sanusi_resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
       className={`relative inline-flex items-center justify-between gap-3 px-4 sm:px-5 py-3 bg-zinc-900 text-zinc-100 dark:bg-zinc-100 dark:text-zinc-900 hover:bg-emerald-600 dark:hover:bg-emerald-400 dark:hover:text-zinc-950 font-mono text-xs font-bold rounded-xl shadow-md transition-all active:scale-[0.98] border border-zinc-800 dark:border-zinc-200 group ${className}`}
     >
       <div className="flex items-center gap-2.5">
@@ -761,10 +827,10 @@ const ProjectItem = ({ project }) => {
         {project.tagline}
       </p>
 
-      {/* Metrics */}
+      {/* Metrics — capped at 3 for glanceability, rest live in CV */}
       {project.metricBadges && (
         <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3.5">
-          {project.metricBadges.map((badge, idx) => (
+          {project.metricBadges.slice(0, 3).map((badge, idx) => (
             <span
               key={idx}
               className="inline-flex items-center text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-zinc-200/80 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 border border-zinc-300 dark:border-zinc-700 font-semibold"
@@ -820,7 +886,7 @@ const ProjectItem = ({ project }) => {
 
       {/* Tech Stack */}
       <div className="flex flex-wrap gap-1.5 pt-2 border-t border-zinc-200/70 dark:border-zinc-800/60">
-        {project.stack.map((tech) => (
+        {project.stack.slice(0, 5).map((tech) => (
           <span
             key={tech}
             className="px-2 py-0.5 text-[9px] sm:text-[10px] font-mono rounded bg-zinc-200/60 dark:bg-zinc-800/50 text-zinc-600 dark:text-zinc-400 border border-zinc-300/50 dark:border-zinc-800"
@@ -832,6 +898,37 @@ const ProjectItem = ({ project }) => {
     </motion.div>
   );
 };
+
+// --- Compact Archive Row (glanceable) ---
+
+const ArchiveRow = ({ project }) => (
+  <a
+    href={project.demo || project.github || "#projects-section"}
+    target={project.demo || project.github ? "_blank" : undefined}
+    rel="noopener noreferrer"
+    className="group flex items-center justify-between gap-3 px-3.5 sm:px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800/80 bg-zinc-100/40 dark:bg-zinc-900/30 hover:border-emerald-500/50 hover:bg-zinc-100/80 dark:hover:bg-zinc-900/60 transition-all"
+  >
+    <div className="min-w-0">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="font-mono font-bold text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 truncate">
+          {project.title}
+        </span>
+        <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-200/80 dark:bg-zinc-800/80 text-zinc-600 dark:text-zinc-400 border border-zinc-300 dark:border-zinc-700 uppercase">
+          {project.category}
+        </span>
+      </div>
+      <p className="text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 truncate mt-0.5">
+        {project.tagline}
+      </p>
+    </div>
+    <div className="flex items-center gap-2 shrink-0">
+      <span className="hidden sm:inline text-[10px] font-mono text-zinc-400">
+        {project.metricBadges?.[0] || project.liveStatus}
+      </span>
+      <ArrowUpRight size={14} className="text-zinc-400 group-hover:text-emerald-500 transition-colors" />
+    </div>
+  </a>
+);
 
 // --- Career Experience Timeline ---
 
@@ -866,14 +963,16 @@ const ExperienceSection = () => (
             {exp.summary}
           </p>
 
-          <ul className="space-y-1.5 text-xs sm:text-sm font-mono text-zinc-700 dark:text-zinc-300">
-            {exp.highlights.map((item, i) => (
-              <li key={i} className="flex items-start gap-1.5 leading-relaxed">
-                <span className="text-emerald-500 font-bold shrink-0 mt-0.5">›</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {exp.highlights.length > 0 && (
+            <ul className="space-y-1.5 text-xs sm:text-sm font-mono text-zinc-700 dark:text-zinc-300">
+              {exp.highlights.map((item, i) => (
+                <li key={i} className="flex items-start gap-1.5 leading-relaxed">
+                  <span className="text-emerald-500 font-bold shrink-0 mt-0.5">›</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </motion.div>
       ))}
     </div>
@@ -940,7 +1039,7 @@ const CommandPalette = ({ isOpen, onClose, isDark, toggleTheme, onOpenGame, onFi
 const NeuralUplink = () => {
   const [input, setInput] = useState('');
   const [history, setHistory] = useState([
-    { role: 'system', text: 'NEURAL_UPLINK ESTABLISHED. ASK ABOUT 2,000+ REST ENDPOINTS, SYNERGIFY ARCHITECTURE, OR CV DOWNLOAD.' }
+    { role: 'system', text: 'NEURAL_UPLINK ESTABLISHED. ASK ABOUT 2,800+ REST ENDPOINTS, SYNERGIFY ARCHITECTURE, OR CV DOWNLOAD.' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef(null);
@@ -1074,6 +1173,7 @@ const App = () => {
   const [matrixMode, setMatrixMode] = useState(false);
   const [activeGame, setActiveGame] = useState(null);
   const [projectCategory, setProjectCategory] = useState("ALL");
+  const [showArchive, setShowArchive] = useState(false);
 
   useKonamiCode(() => {
     setMatrixMode(prev => !prev);
@@ -1101,9 +1201,15 @@ const App = () => {
     textShadow: '0 0 5px #0f0'
   } : {};
 
-  const filteredProjects = projectCategory === "ALL"
-    ? PROJECTS
-    : PROJECTS.filter(p => p.category === projectCategory);
+  const featuredVisible = PROJECTS.filter(p =>
+    p.featured && (projectCategory === "ALL" || p.category === projectCategory)
+  );
+
+  const archiveVisible = PROJECTS.filter(p =>
+    !p.featured && (projectCategory === "ALL" || p.category === projectCategory)
+  );
+
+  const archivedCount = PROJECTS.filter(p => !p.featured).length;
 
   const categories = [
     { id: "ALL", label: "ALL_PROJECTS" },
@@ -1161,9 +1267,9 @@ const App = () => {
             <motion.div variants={fadeInUp} className="mb-3.5 text-emerald-600 dark:text-emerald-500 font-bold tracking-widest text-[11px] sm:text-xs uppercase flex flex-wrap justify-between items-center gap-2">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>SYSTEM.ONLINE // REMOTE_READY</span>
+                <span>OPEN_TO_ROLES // REMOTE_READY</span>
               </div>
-              <div className="flex gap-1.5 text-[10px] text-zinc-400 items-center">
+              <div className="hidden sm:flex gap-1.5 text-[10px] text-zinc-400 items-center">
                 <Command size={10} />
                 <span>+ K for actions</span>
               </div>
@@ -1181,8 +1287,8 @@ const App = () => {
               {CONFIG.subRole} · {CONFIG.location}
             </motion.p>
 
-            {/* Metrics Grid */}
-            <motion.div variants={fadeInUp} className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 my-5">
+            {/* Metrics Grid — 3 glanceable proofs */}
+            <motion.div variants={fadeInUp} className="grid grid-cols-3 gap-2 sm:gap-3 my-5">
               {METRIC_BADGES.map((b, i) => (
                 <div key={i} className="p-2.5 sm:p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                   <div className="text-sm sm:text-lg font-bold text-zinc-900 dark:text-zinc-100 font-mono truncate">
@@ -1199,7 +1305,7 @@ const App = () => {
             </motion.div>
 
             {/* CTAs */}
-            <motion.div variants={fadeInUp} className="flex flex-col xs:flex-row gap-2.5 pt-1">
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-2.5 pt-1">
               <DownloadCvButton className="flex-1" />
               <a
                 href="#projects-section"
@@ -1227,6 +1333,92 @@ const App = () => {
 
           {/* WORK EXPERIENCE */}
           <ExperienceSection />
+
+          {/* PROJECTS SECTION */}
+          <motion.section
+            id="projects-section"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-30px" }}
+            variants={staggerContainer}
+            className="mb-20 sm:mb-24"
+          >
+            <SectionHeader title={showArchive ? "ALL_SYSTEMS_&_ARCHIVE" : "FEATURED_SYSTEMS"} count={showArchive ? `${featuredVisible.length + archiveVisible.length}_LOADED` : "6_FEATURED"} />
+
+            <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-light mb-5 -mt-3">
+              {showArchive
+                ? "Full archive — featured systems up top, the rest as quick-scan rows below."
+                : "Top 6 systems for a quick skim. Full detail lives in my CV — archive holds the rest."}
+            </p>
+
+            {/* Category Filter Pills (Scrollable on Mobile) — only in archive mode */}
+            {showArchive && (
+              <div className="flex gap-1.5 sm:gap-2 mb-6 sm:mb-8 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setProjectCategory(cat.id)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all shrink-0 active:scale-95 ${projectCategory === cat.id
+                        ? 'bg-emerald-600 text-white dark:bg-emerald-500 dark:text-zinc-950 shadow-sm'
+                        : 'bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800'
+                      }`}
+                  >
+                    {cat.label}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Featured Projects List */}
+            <div className="space-y-4 sm:space-y-6">
+              {featuredVisible.map((project) => (
+                <ProjectItem key={project.id} project={project} />
+              ))}
+              {featuredVisible.length === 0 && (
+                <p className="text-xs font-mono text-zinc-500 text-center py-4">
+                  No featured projects in this category — try ALL_PROJECTS.
+                </p>
+              )}
+            </div>
+
+            {/* Archive Toggle */}
+            <div className="mt-8 text-center">
+              {!showArchive ? (
+                <button
+                  onClick={() => setShowArchive(true)}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 text-xs font-mono font-bold border border-zinc-200 dark:border-zinc-800 transition-all active:scale-[0.98]"
+                >
+                  <span>VIEW_ARCHIVE [+{archivedCount} MORE_SYSTEMS]</span>
+                  <ChevronDown size={14} />
+                </button>
+              ) : (
+                <div className="space-y-5">
+                  <div className="pt-2">
+                    <div className="text-[10px] font-mono font-bold tracking-widest text-zinc-400 uppercase mb-3">
+                      ── ARCHIVE · {archiveVisible.length} MORE ──
+                    </div>
+                    <div className="space-y-2 text-left">
+                      {archiveVisible.map((project) => (
+                        <ArchiveRow key={project.id} project={project} />
+                      ))}
+                      {archiveVisible.length === 0 && (
+                        <p className="text-xs font-mono text-zinc-500 text-center py-4">
+                          No archived projects in this category — try ALL_PROJECTS.
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => { setShowArchive(false); setProjectCategory("ALL"); }}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-mono font-bold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
+                  >
+                    <ChevronUp size={14} />
+                    <span>SHOW_LESS</span>
+                  </button>
+                </div>
+              )}
+            </div>
+          </motion.section>
 
           {/* TECH STACK */}
           <motion.section
@@ -1261,41 +1453,6 @@ const App = () => {
 
           {/* SYSTEM LOGS */}
           <SystemLogs />
-
-          {/* PROJECTS SECTION */}
-          <motion.section
-            id="projects-section"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-30px" }}
-            variants={staggerContainer}
-            className="mb-20 sm:mb-24"
-          >
-            <SectionHeader title="ENGINEERED_SYSTEMS_&_PROJECTS" count={`${filteredProjects.length}_LOADED`} />
-
-            {/* Category Filter Pills (Scrollable on Mobile) */}
-            <div className="flex gap-1.5 sm:gap-2 mb-6 sm:mb-8 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setProjectCategory(cat.id)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all shrink-0 active:scale-95 ${projectCategory === cat.id
-                      ? 'bg-emerald-600 text-white dark:bg-emerald-500 dark:text-zinc-950 shadow-sm'
-                      : 'bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800'
-                    }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Projects List */}
-            <div className="space-y-4 sm:space-y-6">
-              {filteredProjects.map((project) => (
-                <ProjectItem key={project.id} project={project} />
-              ))}
-            </div>
-          </motion.section>
 
           {/* GEAR MANIFEST */}
           <motion.div variants={fadeInUp} className="mb-20 sm:mb-24">

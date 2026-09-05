@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanusi Azeem - CV</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 8mm 11mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Times New Roman", Times, "Cambria", Georgia, serif;
+      font-size: 9pt;
+      line-height: 1.22;
+      color: #111;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .header h1 {
+      font-size: 17.5pt;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      margin: 0 0 2px 0;
+      text-transform: uppercase;
+    }
+    .role-title {
+      font-size: 9.3pt;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 2px;
+      letter-spacing: 0.3px;
+    }
+    .contact-line {
+      font-size: 8.6pt;
+      color: #222;
+    }
+    .contact-line a {
+      color: #111;
+      text-decoration: none;
+    }
+    .contact-line span.sep {
+      margin: 0 4px;
+      color: #555;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 9.3pt;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #222;
+      padding-bottom: 1px;
+      margin-top: 4.5px;
+      margin-bottom: 2.5px;
+    }
+
+    /* Skills */
+    .skills-block {
+      font-size: 8.85pt;
+      line-height: 1.25;
+      margin-bottom: 2px;
+    }
+    .skill-line {
+      margin-bottom: 1px;
+    }
+    .skill-category {
+      font-weight: 700;
+    }
+
+    /* Entry Blocks */
+    .entry {
+      margin-bottom: 3px;
+    }
+    .entry-row-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 9.2pt;
+    }
+    .entry-row-2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-style: italic;
+      font-size: 8.9pt;
+      color: #222;
+      margin-bottom: 1.5px;
+    }
+    .entry-org {
+      font-weight: 700;
+    }
+    .entry-location, .entry-date {
+      font-weight: 400;
+      text-align: right;
+    }
+
+    /* Bullet Points */
+    ul {
+      margin: 1px 0 2.5px 0;
+      padding-left: 14px;
+    }
+    li {
+      margin-bottom: 1.2px;
+      padding-left: 1px;
+      text-align: justify;
+    }
+
+    /* Additional Info */
+    .additional-line {
+      font-size: 8.7pt;
+      margin-top: 2px;
+      line-height: 1.25;
+    }
+    .additional-label {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>SANUSI AZEEM</h1>
+    <div class="role-title">Backend Engineer · Node.js · TypeScript · NestJS · PostgreSQL</div>
+    <div class="contact-line">
+      Lagos, Nigeria<span class="sep">•</span>
+      +234 909 502 1208<span class="sep">•</span>
+      <a href="mailto:bljazeem@gmail.com">bljazeem@gmail.com</a><span class="sep">•</span>
+      <a href="https://linkedin.com/in/sanusi-azeem">linkedin.com/in/sanusi-azeem</a><span class="sep">•</span>
+      <a href="https://github.com/Azeem-py">github.com/Azeem-py</a>
+    </div>
+  </header>
+
+  <!-- TECHNICAL SKILLS -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-block">
+      <div class="skill-line"><span class="skill-category">Languages & Frameworks:</span> TypeScript, JavaScript, Node.js, NestJS, Express, Next.js, React, SQL, Python</div>
+      <div class="skill-line"><span class="skill-category">Databases & Architecture:</span> PostgreSQL (PostGIS), Redis, Prisma, TypeORM, RESTful APIs, WebSockets, Socket.io, Microservices</div>
+      <div class="skill-line"><span class="skill-category">Payments & Security:</span> Paystack, Stripe, PayPal, Distributed Locks, Idempotency, HMAC-SHA256 SSO, OAuth, RBAC, 2FA</div>
+      <div class="skill-line"><span class="skill-category">DevOps & Tooling:</span> Docker, Git, GitHub Actions, BullMQ, Jest, Supertest, Linux, Turborepo</div>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section>
+    <div class="section-title">Work Experience</div>
+
+    <!-- Synergify -->
+    <div class="entry">
+      <div class="entry-row-1">
+        <span class="entry-org">Synergify</span>
+        <span class="entry-location">Remote</span>
+      </div>
+      <div class="entry-row-2">
+        <span>Lead Backend Developer</span>
+        <span class="entry-date">Sep 2024 – Present</span>
+      </div>
+      <ul>
+        <li>Architected production backend infrastructure across 5 core applications using NestJS, PostgreSQL, and Redis, sustaining 50,000+ monthly requests with 99.9% API uptime</li>
+        <li>Engineered QR/NFC customer engagement POS engine with PostGIS geolocation, enabling real-time check-ins and offline data synchronization across 100+ active merchant venues</li>
+        <li>Built multi-vendor marketplace platform supporting 50+ onboarded vendors with automated catalog sync, reducing average checkout response latency to under 120ms</li>
+        <li>Designed rewards and loyalty platform processing points, cashback, and wallet redemptions via Stripe and PayPal, securing over $25,000 in monthly transaction volume</li>
+        <li>Implemented multi-tier affiliate program with KYC verification and automated Paystack disbursements, reducing manual payout overhead by 90%</li>
+        <li>Hardened payment pipelines with Redis distributed locks and idempotency keys, eliminating duplicate credit errors and race conditions across 100% of payment flows</li>
+        <li>Created centralized single sign-on (SSO) utilizing HMAC-SHA256 service-to-service authentication, standardizing secure access across all distributed services</li>
+      </ul>
+    </div>
+
+    <!-- WooManager -->
+    <div class="entry">
+      <div class="entry-row-1">
+        <span class="entry-org">WooManager</span>
+        <span class="entry-location">Remote</span>
+      </div>
+      <div class="entry-row-2">
+        <span>Backend Engineer (Contract)</span>
+        <span class="entry-date">Jan 2024 – Aug 2024</span>
+      </div>
+      <ul>
+        <li>Engineered custom WooCommerce ERP integration service using NestJS, synchronizing 10,000+ catalog inventory items and reducing stockout mismatches by 95%</li>
+        <li>Developed modular REST API endpoints and standardized React Query hooks, accelerating frontend dashboard load speeds by 40%</li>
+      </ul>
+    </div>
+
+    <!-- AffiliateBase -->
+    <div class="entry">
+      <div class="entry-row-1">
+        <span class="entry-org">AffiliateBase</span>
+        <span class="entry-location">Remote</span>
+      </div>
+      <div class="entry-row-2">
+        <span>Backend Developer (Contract)</span>
+        <span class="entry-date">Jul 2023 – Dec 2023</span>
+      </div>
+      <ul>
+        <li>Built Django REST Framework backend with Next.js frontend integration, implementing bulk data ingestion pipelines that processed 5,000+ records in under 3 seconds</li>
+        <li>Implemented server-side rendered (SSG) product pages, optimizing search indexing and driving a 30% increase in organic search traffic</li>
+      </ul>
+    </div>
+
+    <!-- Yurshorpe -->
+    <div class="entry">
+      <div class="entry-row-1">
+        <span class="entry-org">Yurshorpe</span>
+        <span class="entry-location">Remote</span>
+      </div>
+      <div class="entry-row-2">
+        <span>Software Engineer (Contract)</span>
+        <span class="entry-date">Apr 2023 – Jun 2023</span>
+      </div>
+      <ul>
+        <li>Developed real-time buyer-seller messaging architecture using Firebase and WebSockets, facilitating instant chat delivery for 2,000+ active customer interactions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <div class="section-title">Projects</div>
+
+    <div class="entry">
+      <div class="entry-row-1">
+        <span class="entry-org">Logos – Open-Source Collaborative Learning Platform</span>
+        <span class="entry-location">Open Source</span>
+      </div>
+      <div class="entry-row-2">
+        <span>Creator & Full-Stack Developer</span>
+        <span class="entry-date">May 2024 – Jun 2024</span>
+      </div>
+      <ul>
+        <li>Developed custom TF-IDF keyword extraction and search indexing engine, matching relevant educational feeds to users with 85% topic relevance</li>
+        <li>Integrated Redis caching layer and optimized SQL joins, cutting query response times by 60% across high-volume community discussion threads</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row-1">
+        <span class="entry-org">IssueFlow – Multi-Tenant Issue Tracking Platform</span>
+        <span class="entry-location">issuefloww.vercel.app</span>
+      </div>
+      <div class="entry-row-2">
+        <span>Creator & Full-Stack Developer</span>
+        <span class="entry-date">Aug 2024</span>
+      </div>
+      <ul>
+        <li>Architected full-stack SaaS issue tracker supporting multi-tenant isolation, role-based permissions, and custom kanban workflows using NestJS, React, and PostgreSQL</li>
+        <li>Implemented optimistic UI state updates, tag indexing, and automated Web Push notifications, maintaining sub-100ms client interaction latency</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <div class="section-title">Education</div>
+    <div class="entry">
+      <div class="entry-row-1">
+        <span class="entry-org">University of Ilorin</span>
+        <span class="entry-location">Ilorin, Nigeria</span>
+      </div>
+      <div class="entry-row-2">
+        <span>B.Sc. in Statistics</span>
+        <span class="entry-date">Graduated: 2026</span>
+      </div>
+      <ul>
+        <li>Final-Year Project: Engineered a hybrid recommendation engine utilizing TF-IDF and collaborative filtering, achieving 86% recommendation accuracy across test datasets</li>
+        <li>Quantitative Coursework: Stochastic Modeling, Time Series Forecasting, Multivariate Analysis, Probability Theory, Linear Algebra, Statistical Inference</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ADDITIONAL INFORMATION -->
+  <div class="additional-line">
+    <span class="additional-label">Languages:</span> English (Fluent), Yoruba (Native) <span class="sep" style="margin: 0 5px; color: #555;">•</span>
+    <span class="additional-label">Interests:</span> Blitz chess & tournament analysis, tactical esports, non-fiction & literature reading
+  </div>
+
+</body>
+</html>
