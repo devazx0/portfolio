@@ -34,7 +34,7 @@ import {
 // --- Configuration & Resume Data ---
 
 const CONFIG = {
-  name: "SANUSI AZEEM",
+  name: "SANUSI AZEEMsssssssssssssss",
   role: "BACKEND & DISTRIBUTED SYSTEMS ENGINEER",
   subRole: "Node.js · TypeScript · NestJS · PostgreSQL",
   email: "bljazeem@gmail.com",
@@ -1154,7 +1154,7 @@ const SystemLogs = () => (
         <div key={log.id} className="flex flex-col sm:flex-row sm:gap-3 leading-relaxed">
           <span className="opacity-50 shrink-0">[{log.timestamp}]</span>
           <span className={`font-bold shrink-0 w-16 sm:w-20 ${log.level === 'SUCCESS' ? 'text-emerald-600 dark:text-emerald-500' :
-              log.level === 'WARN' ? 'text-amber-600 dark:text-amber-500' : 'text-blue-600 dark:text-blue-500'
+            log.level === 'WARN' ? 'text-amber-600 dark:text-amber-500' : 'text-blue-600 dark:text-blue-500'
             }`}>
             {log.level}
           </span>
@@ -1359,8 +1359,8 @@ const App = () => {
                     key={cat.id}
                     onClick={() => setProjectCategory(cat.id)}
                     className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all shrink-0 active:scale-95 ${projectCategory === cat.id
-                        ? 'bg-emerald-600 text-white dark:bg-emerald-500 dark:text-zinc-950 shadow-sm'
-                        : 'bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800'
+                      ? 'bg-emerald-600 text-white dark:bg-emerald-500 dark:text-zinc-950 shadow-sm'
+                      : 'bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800'
                       }`}
                   >
                     {cat.label}
