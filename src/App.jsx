@@ -34,7 +34,7 @@ import {
 // --- Configuration & Resume Data ---
 
 const CONFIG = {
-  name: "SANUSI AZEEMsssssssssssssss",
+  name: "SANUSI AZEEM",
   role: "BACKEND & DISTRIBUTED SYSTEMS ENGINEER",
   subRole: "Node.js · TypeScript · NestJS · PostgreSQL",
   email: "bljazeem@gmail.com",
