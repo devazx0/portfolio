@@ -52,7 +52,6 @@ const CONFIG = {
 
 const METRIC_BADGES = [
   { label: "PRODUCTION_APIS", value: "9+", sub: "Shipped from scratch" },
-  { label: "REST_ENDPOINTS", value: "2,800+", sub: "NestJS & PostgreSQL" },
   { label: "REMOTE_OVERLAP", value: "4–9h", sub: "US/EU · GMT+1" }
 ];
 
@@ -98,11 +97,11 @@ const EXPERIENCES = [
     company: "Synergify",
     type: "Remote",
     period: "Sep 2024 – Present",
-    summary: "Architected and shipped core backend infrastructure across 5 production services (NestJS, PostgreSQL, Redis), sustaining 50,000+ monthly requests with 99.9% uptime.",
+    summary: "Lead backend owner for the MCOM ecosystem — hub-and-spoke platform (NestJS, PostgreSQL, Redis) with MCOM Solutions Central as identity + billing hub for Mall, Rewards, Spin, VCard, Links and QR-Thrive.",
     highlights: [
-      "Engineered QR/NFC customer engagement POS engine with PostGIS geolocation and offline sync across 100+ active venues.",
-      "Hardened payments & state with Redis distributed locks and idempotency keys, eliminating duplicate transactions across 100% of payment flows.",
-      "Built multi-tier affiliate and merchant payout engine via Paystack, reducing manual disbursement overhead by 90%."
+      "Built Central auth: OAuth2 SSO + short-lived JWT handshake + HMAC-SHA256 data-sharing with JIT provisioning for one login across all platforms.",
+      "Built Central payments: Stripe/PayPal + centralized wallet, memberships/packages, proxied in-app checkout, and HMAC-signed webhooks syncing entitlements.",
+      "Shipped spoke services on shared contracts (plans CRUD, permissions gates), sustaining 50,000+ monthly requests at 99.9% uptime."
     ]
   },
   {
@@ -594,7 +593,7 @@ const TicTacToe = () => {
   return (
     <div className="flex flex-col items-center w-full">
       <div className={`mb-4 font-mono font-bold text-sm sm:text-base ${winner ? 'text-amber-500 animate-pulse' : 'text-zinc-500 dark:text-zinc-400'}`}>
-        {winner ? `WINNER: ${winner} 🎉` : (
+        {winner ? `WINNER: ${winner} ~` : (
           <span>NEXT: <span className={isX ? "text-emerald-500" : "text-rose-500"}>{isX ? 'X' : 'O'}</span></span>
         )}
       </div>
@@ -787,7 +786,7 @@ const ProjectItem = ({ project }) => {
               {project.category}
             </span>
             <span className="text-[10px] font-mono text-zinc-400 dark:text-zinc-500">
-              ● {project.liveStatus}
+              ~ {project.liveStatus}
             </span>
           </div>
           <h3 className="text-zinc-900 dark:text-zinc-100 font-bold font-mono text-lg sm:text-2xl tracking-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors break-words">
@@ -835,7 +834,7 @@ const ProjectItem = ({ project }) => {
               key={idx}
               className="inline-flex items-center text-[10px] sm:text-[11px] font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-zinc-200/80 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 border border-zinc-300 dark:border-zinc-700 font-semibold"
             >
-              ⚡ {badge}
+              ~ {badge}
             </span>
           ))}
         </div>
@@ -873,7 +872,7 @@ const ProjectItem = ({ project }) => {
                   </div>
                   {project.architectureSpecs.map((spec, i) => (
                     <div key={i} className="flex items-start gap-2 leading-relaxed">
-                      <span className="text-emerald-500 font-bold shrink-0">›</span>
+                      <span className="text-emerald-500 font-bold shrink-0">~</span>
                       <span>{spec}</span>
                     </div>
                   ))}
@@ -967,7 +966,7 @@ const ExperienceSection = () => (
             <ul className="space-y-1.5 text-xs sm:text-sm font-mono text-zinc-700 dark:text-zinc-300">
               {exp.highlights.map((item, i) => (
                 <li key={i} className="flex items-start gap-1.5 leading-relaxed">
-                  <span className="text-emerald-500 font-bold shrink-0 mt-0.5">›</span>
+                  <span className="text-emerald-500 font-bold shrink-0 mt-0.5">~</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -1288,7 +1287,7 @@ const App = () => {
             </motion.p>
 
             {/* Metrics Grid — 3 glanceable proofs */}
-            <motion.div variants={fadeInUp} className="grid grid-cols-3 gap-2 sm:gap-3 my-5">
+            <motion.div variants={fadeInUp} className="grid grid-cols-2 gap-2 sm:gap-3 my-5">
               {METRIC_BADGES.map((b, i) => (
                 <div key={i} className="p-2.5 sm:p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                   <div className="text-sm sm:text-lg font-bold text-zinc-900 dark:text-zinc-100 font-mono truncate">
