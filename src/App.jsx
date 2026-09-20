@@ -120,7 +120,6 @@ const EXPERIENCES = [
     role: "B.Sc. in Statistics",
     company: "University of Ilorin",
     type: "Degree",
-    period: "Graduated: 2026",
     summary: "Statistical inference, probability modeling, time series analysis, and machine learning applications.",
     highlights: [
       "Final-Year Project: Built a hybrid recommendation engine with TF-IDF and collaborative filtering, achieving 86% recommendation accuracy on test datasets."
@@ -954,7 +953,7 @@ const ExperienceSection = () => (
               {exp.role} <span className="text-emerald-600 dark:text-emerald-400 font-medium">@ {exp.company}</span>
             </h3>
             <span className="text-[11px] sm:text-xs font-mono text-zinc-500 dark:text-zinc-400 shrink-0">
-              {exp.period} · {exp.type}
+              {exp.period ? `${exp.period} · ` : ""}{exp.type}
             </span>
           </div>
 
