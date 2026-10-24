@@ -34,7 +34,7 @@ import {
 // --- Configuration & Resume Data ---
 
 const CONFIG = {
-  name: "SANUSI AZEEM",
+  name: "AZEEM SANUSI",
   role: "BACKEND & DISTRIBUTED SYSTEMS ENGINEER",
   subRole: "Node.js · TypeScript · NestJS · PostgreSQL",
   email: "bljazeem@gmail.com",
@@ -43,7 +43,7 @@ const CONFIG = {
   resumeUrl: "/Azeem_Sanusi_resume.pdf",
   avatarUrl: "/my-head.png",
   social: {
-    github: "https://github.com/Azeem-py",
+    github: "https://github.com/devazx0",
     linkedin: "https://linkedin.com/in/sanusi-azeem",
     whatsapp: "https://wa.me/2349095021208",
     email: "mailto:bljazeem@gmail.com"
@@ -332,7 +332,7 @@ const PROJECTS = [
     ],
     stack: ["NestJS", "React", "Prisma", "PostgreSQL", "Redis", "PWA"],
     demo: "https://logos.devazeem.cv/feed",
-    github: "https://github.com/Azeem-py",
+    github: "https://github.com/devazx0",
     liveStatus: "OPEN_SOURCE"
   },
   {
@@ -376,7 +376,7 @@ const PROJECTS = [
     ],
     stack: ["NestJS", "React", "Vite", "Prisma", "PostgreSQL", "Turborepo", "Tailwind CSS", "PWA"],
     demo: "https://issuefloww.vercel.app/",
-    github: "https://github.com/Azeem-py",
+    github: "https://github.com/devazx0",
     liveStatus: "LIVE_APP"
   }
 ];
@@ -425,9 +425,9 @@ const callGemini = async (userQuery) => {
   const apiKey = "";
 
   const systemPrompt = `
-    You are the AI interface for Sanusi Azeem's portfolio.
+    You are the AI interface for Azeem Sanusi's portfolio.
     Persona: Precise, highly technical, terminal/cyberpunk backend engineer assistant.
-    Profile: Sanusi Azeem, Backend & Distributed Systems Engineer (NestJS, TypeScript, PostgreSQL, PostGIS, Redis). Shipped 9+ production APIs, 2800+ endpoints. Synergify Lead Backend Developer.
+    Profile: Azeem Sanusi, Backend & Distributed Systems Engineer (NestJS, TypeScript, PostgreSQL, PostGIS, Redis). Shipped 9+ production APIs, 2800+ endpoints. Synergify Lead Backend Developer.
     Resume: Downloadable directly on page.
     Contact: ${CONFIG.email} | WhatsApp: ${CONFIG.phone}.
   `;
@@ -464,7 +464,7 @@ const callGemini = async (userQuery) => {
         if (q.includes("contact") || q.includes("hire") || q.includes("email")) {
           return `Reach Azeem directly at ${CONFIG.email} or WhatsApp at ${CONFIG.phone}. Open for backend and distributed systems roles.`;
         }
-        return `SYSTEM_ONLINE: Sanusi Azeem is a Lead Backend Engineer (NestJS / TypeScript / PostgreSQL) with 9+ production APIs & 2,800+ endpoints shipped.`;
+        return `SYSTEM_ONLINE: Azeem Sanusi is a Lead Backend Engineer (NestJS / TypeScript / PostgreSQL) with 9+ production APIs & 2,800+ endpoints shipped.`;
       }
       await new Promise(r => setTimeout(r, delays[i]));
     }
@@ -1518,7 +1518,7 @@ const App = () => {
                   <Github size={17} className="text-emerald-600 dark:text-emerald-400 shrink-0" />
                   <div className="text-xs font-mono min-w-0">
                     <div className="text-zinc-400 text-[10px]">GITHUB_SOURCE</div>
-                    <div className="text-zinc-800 dark:text-zinc-200 font-bold truncate">github.com/Azeem-py</div>
+                    <div className="text-zinc-800 dark:text-zinc-200 font-bold truncate">github.com/devazx0</div>
                   </div>
                 </div>
                 <ArrowUpRight size={14} className="text-zinc-400 group-hover:text-emerald-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0 ml-2" />
